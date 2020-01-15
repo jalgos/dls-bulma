@@ -1,0 +1,168 @@
+$background-side: $white-ter
+$background-side-hovered: $grey-lighter
+
+$background-side-inverted: $dark
+$background-side-hovered-inverted: $dark-lighter
+
+.is-menu
+  background-color: $background-side
+
+.menu
+  .search-box
+    margin: 5px
+
+  .menu-label
+    margin-left: 20px
+    color: $black
+    font-weight: 600
+
+  .menu-list
+    a
+      padding-left: 20px
+
+    a:hover
+      color: $black
+      background-color: $background-side-hovered
+      text-decoration: none
+
+    a.is-active
+      color: $black
+      border-left: 2px solid $black
+      background-color: $background-side-hovered
+
+$menu-hovered-dark: $white
+
+.dark-side
+  background-color: $background-side-inverted
+
+  .is-menu
+    background-color: $background-side-inverted
+
+  .menu
+    .search-box
+      margin: 5px
+
+    .menu-label
+      margin-left: 20px
+      color: $white-ter
+      font-weight: 600
+
+    .menu-list
+      a
+        padding-left: 20px
+        color: $text-invert
+
+      a:hover
+        color: $menu-hovered-dark
+        background-color: $background-side-hovered-inverted
+
+      a.is-active
+        color: $menu-hovered-dark
+        border-left: 2px solid $menu-hovered-dark
+        background-color: $background-side-hovered-inverted
+
+      & li ul
+        border-left-color: $background-side-hovered-inverted
+
+.meeseeks-menu
+  font-size: 0.9rem
+  -ms-overflow-style: -ms-autohiding-scrollbar
+  scrollbar-face-color: $scrollbar-thumb-color
+  scrollbar-track-color: transparent
+  scrollbar-width: thin
+  scrollbar-color: $scrollbar-thumb-color transparent
+  overflow-y: scroll
+  height: calc(100% - 4rem)
+  background-color: $menu-item-active-color
+
+
+  .search-box
+    margin: 5px
+
+  .meeseeks-menu-list
+    a
+      box-sizing: border-box
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+
+    a:hover
+      text-decoration: none
+
+// This tag is necessary for thumb and track to be styled, they won't appear if scrollbar isn't mentioned
+.meeseeks-menu::-webkit-scrollbar
+  width: 5px
+  background-color: $scrollbar-background-color
+
+.meeseeks-menu::-webkit-scrollbar-thumb
+  background-color: $scrollbar-thumb-color
+
+.meeseeks-menu::-webkit-scrollbar-track
+  background-color: transparent
+
+.meeseeks-menu-label, .meeseeks-menu-item-text
+  margin-right: 10px
+
+aside > .meeseeks-menu-list-parent
+  background-color: $menu-item-color
+
+.meeseeks-menu-list
+  border-top: 1px solid rgba(255, 255, 255, 0.07)
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07)
+
+.meeseeks-menu-list-parent, .meeseeks-menu-item
+  padding: 10px 10px 10px 15px
+
+  &:hover, &.is-active, &.is-expanded
+    & > .icon
+      color: $menu-text-hovered-color
+
+    & > i
+      color: $menu-text-hovered-color
+
+    & > svg
+      color: $menu-text-hovered-color
+
+  &.is-active
+    background-color: $menu-item-active-color !important
+
+.meeseeks-menu-list-parent
+  display: flex
+  flex-direction: row
+  align-items: center
+  height: 60px
+  & > .meeseeks-menu-label
+    color: $menu-text-color
+
+  & > .icon
+    color: $menu-text-color
+
+  &:hover, &.is-active, &.is-expanded
+    & > .meeseeks-menu-label
+      color: $menu-text-hovered-color
+
+.meeseeks-menu-item
+  display: flex
+  align-items: center
+  height: 60px
+  & > a
+    & > .icon
+      color: $menu-text-color
+
+    & > .meeseeks-menu-item-text
+      color: $menu-text-color
+
+  &:hover, &.is-active, &.is-expanded
+    & > a
+      & > .meeseeks-menu-item-text
+        color: $menu-text-hovered-color
+
+.meeseeks-menu-label
+  margin-bottom: 0
+
+.menu-icon
+  background-color: rgba(255, 255, 255, 0.22)
+  padding: 20px
+  border-radius: 0.25rem
+
+.menu-chevron
+  font-size: 14.4px

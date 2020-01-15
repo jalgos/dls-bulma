@@ -1,0 +1,30 @@
+
+@import ~bulma/sass/utilities/_all
+
+.container.is-fullheight
+  height: 100%
+
+.dashboard.is-pinned
+  .container
+      +from($desktop)
+        max-width: $desktop - (2 * $gap) - 240px
+        width: $desktop - (2 * $gap) - 240px
+        &.is-fluid
+          margin-left: $gap
+          margin-right: $gap
+          max-width: none
+          width: auto
+      +until($widescreen)
+        &.is-widescreen
+          max-width: $widescreen - (2 * $gap) - 240px
+          width: auto
+      +until($fullhd)
+        &.is-fullhd
+          max-width: $fullhd - (2 * $gap)- 240px
+          width: auto
+      +from($widescreen)
+        max-width: $widescreen - (2 * $gap) - 240px
+        width: $widescreen - (2 * $gap) - 240px
+      +from($fullhd)
+        max-width: $fullhd - (2 * $gap) - 240px
+        width: $fullhd - (2 * $gap) - 240px

@@ -1,0 +1,102 @@
+.input[disabled], .textarea[disabled], fieldset[disabled] .input, fieldset[disabled] .textarea
+  background-color: #f5f5f5
+  border-color: #f5f5f5
+  box-shadow: none
+  color: #7a7a7a
+
+.button[disabled], .file-cta[disabled], .file-name[disabled], .input[disabled], .pagination-ellipsis[disabled], .pagination-link[disabled], .pagination-next[disabled], .pagination-previous[disabled], .select fieldset[disabled] select, .select select[disabled], .textarea[disabled], fieldset[disabled] .button, fieldset[disabled] .file-cta, fieldset[disabled] .file-name, fieldset[disabled] .input, fieldset[disabled] .pagination-ellipsis, fieldset[disabled] .pagination-link, fieldset[disabled] .pagination-next, fieldset[disabled] .pagination-previous, fieldset[disabled] .select select, fieldset[disabled] .textarea
+  cursor: not-allowed
+
+.field
+  width: 100%
+  height: 100%
+
+.field-disabled
+  border: none
+
+.field-label
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.control
+  margin: 10px 0
+
+.input
+  border-radius: .25rem
+
+.input, .select select
+  &.is-small
+    font-size: .7875rem
+    line-height: 1.5
+    height: calc(1.68125rem + 2px)
+    padding: .25rem .5rem
+    border-radius: .2rem
+  &.is-large
+    font-size: 1.125rem
+    line-height: 1.5
+    height: calc(2.6875rem + 2px)
+    padding: .5rem 1rem
+    border-radius: .3rem
+
+.checkbox
+  display: flex !important
+  align-items: center
+
+.select
+  select
+    max-height: 200px
+
+.select:not(.is-multiple)::after
+  border-right: 0 !important
+  border-top: 0 !important
+
+.floating-label
+  position: absolute
+  top: 0
+  left: 0
+  font-size: .85714em
+  width: 100%
+  margin-top: .42857em
+  margin-left: 1px
+  padding: 0 .91667em
+  pointer-events: none
+  transition: all .2s ease-out
+  opacity: 0
+  &.is-active
+    opacity: 1
+  & ~ .input
+    background-color: green
+    height: calc(2.8rem + 2px)
+
+.has-floating-label
+  .input
+    height: calc(2.8rem + 2px)
+    padding-top: 1.2rem
+    &:focus, &.has-content
+      & ~ .floating-label
+        opacity: 1
+
+input.switch:after
+  color: rgba(0, 0, 0, 0.5) !important
+
+.field.is-dark
+  background-color: $dark
+  .input, .textarea, .select
+    background-color: rgba(255, 255, 255, 0.22)
+    border: none
+    &:focus
+      border: none
+      box-shadow: none
+    &::placeholder
+      color: rgba(255, 255, 255, 0.5)
+  .checkbox, .radio
+    &:hover
+      color: $gray-500
+  select
+    border: none
+    background-color: transparent
+    color: inherit
+  .select:not(.is-multiple)::after
+    border-right: 0 !important
+    border-top: 0 !important

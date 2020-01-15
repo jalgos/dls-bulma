@@ -1,0 +1,37 @@
+.snackbar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: absolute
+  bottom: 0
+  left: 50%
+  z-index: 100
+  transform: translateX(-50%)
+  transition: opacity 0.2s
+  height: 50px
+  min-width: 300px
+  padding-left: 30px
+  background-color: #008783
+  box-shadow: 0 8px 16px 0 rgba(10,10,33,0.25)
+
+  .snackbar-text
+    display: flex
+    align-items: center
+    color: white
+    height: 100%
+
+  .snackbar-action
+    display: flex
+    align-items: center
+    height: 100%
+    padding: 0 25px
+    cursor: pointer
+    color: #ffa016
+    font-weight: bold
+
+  &.snackbar-hidden
+    opacity: 0
+    pointer-events: none
+
+  &.snackbar-top
+    top: 0

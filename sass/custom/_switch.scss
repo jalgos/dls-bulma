@@ -1,0 +1,222 @@
+input.switch {
+  position: relative;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  width: 50px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #d9dadc;
+  border-radius: 50px;
+  box-shadow: inset -20px 0 0 0;
+  color: white;
+  transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  -webkit-transition-duration: 200ms;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 2px 2px 6px;
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  &:checked {
+    border-color: #d9dadc;
+    box-shadow: inset 20px 0 0 0;
+    color: white;
+
+    &:after {
+      left: 20px;
+      box-shadow: -2px 2px 3px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  // Small size
+
+  &.is-small {
+    width: 25px;
+    height: 15px;
+    box-shadow: inset -10px 0 0 0;
+    color: white;
+
+    &:after {
+      width: 12px;
+      height: 12px;
+      box-shadow: 1px 1px 6px;
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:checked {
+      box-shadow: inset 10px 0 0 0;
+      color: white;
+
+      &:after {
+        left: 10px;
+        box-shadow: -1px 1px 3px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  // Medium size
+
+  &.is-medium {
+    width: 37px;
+    height: 22px;
+    box-shadow: inset -13px 0 0 0;
+    color: white;
+
+    &:after {
+      width: 20px;
+      height: 20px;
+      box-shadow: 1px 1px 6px;
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:checked {
+      box-shadow: inset 13px 0 0 0;
+      color: white;
+
+      &:after {
+        left: 13px;
+        box-shadow: -1px 1px 3px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  // Large size
+
+  &.is-large {
+    width: 75px;
+    height: 45px;
+    box-shadow: inset -30px 0 0 0;
+    color: white;
+
+    &:after {
+      width: 42px;
+      height: 42px;
+      box-shadow: 2px 2px 6px;
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:checked {
+      box-shadow: inset 30px 0 0 0;
+      color: white;
+
+      &:after {
+        left: 30px;
+        box-shadow: -2px 2px 3px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  // Black color
+
+  &.is-black {
+    &:checked {
+      border-color: #0a0a0a;
+      color: #0a0a0a;
+    }
+  }
+
+  // Dark color
+
+  &.is-dark {
+    &:checked {
+      border-color: #21374b;
+      color: #21374b;
+    }
+  }
+
+  // Light color
+
+  &.is-light {
+    &:checked {
+      border-color: #d9dadc;
+      color: whitesmoke;
+    }
+  }
+
+  // White color
+
+  &.is-white {
+    &:checked {
+      border-color: #d9dadc;
+      color: white;
+    }
+  }
+
+  // Primary color
+
+  &.is-primary {
+    &:checked {
+      border-color: #27ae5f;
+      color: #27ae5f;
+    }
+  }
+
+  // Link color
+
+  &.is-link {
+    &:checked {
+      border-color: #3273dc;
+      color: #3273dc;
+    }
+  }
+
+  // Info color
+
+  &.is-info {
+    &:checked {
+      border-color: #209cee;
+      color: #209cee;
+    }
+  }
+
+  // Success color
+
+  &.is-success {
+    &:checked {
+      border-color: #27ae5f;
+      color: #27ae5f;
+    }
+  }
+
+  // Warning color
+
+  &.is-warning {
+    &:checked {
+      border-color: #ffdd57;
+      color: #ffdd57;
+    }
+  }
+
+  // Danger color
+
+  &.is-danger {
+    &:checked {
+      border-color: #c3523f;
+      color: #c3523f;
+    }
+  }
+
+  // Text color
+
+  &.is-text {
+    &:checked {
+      border-color: #c3523f;
+      color: #c3523f;
+    }
+  }
+}
